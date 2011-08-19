@@ -34,11 +34,11 @@
         return this.each(function () {
             this.addEventListener("dragover", trap, false);
             this.addEventListener("drop", function (event) {
-                var file, files, count;
+                var files, count;
                 trap(event);
-                files = event.dataTransfer.files;
-                count = files.length;
                 if ("function" === typeof options.drop) {
+                    files = event.dataTransfer.files;
+                    count = files.length;
                     options.drop.call(this, files, count);
                 }
             }, false);
