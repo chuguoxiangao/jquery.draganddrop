@@ -35,7 +35,6 @@
             this.addEventListener("dragover", trap, false);
             this.addEventListener("drop", function (event) {
                 var file, files, count;
-                debugger;
                 trap(event);
                 files = event.dataTransfer.files;
                 count = files.length;
